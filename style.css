@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@400;600&display=swap');
+
+:root {
+    --violet: hsl(257, 40%, 49%);
+    --magenta: hsl(300, 69%, 71%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(images/bg-mobile.svg);
+    background-color: var(--violet);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+main {
+    margin: 30px auto;
+    width: 81%;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    height: 30px;
+}
+
+.mockups {
+    width: 100%;
+    padding: 3.5rem 0;
+}
+
+.bottom-right {
+    color: white;
+    text-align: center;
+}
+
+.bottom-right h2 {
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    padding-bottom: 1.2rem;
+}
+
+.bottom-right p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.95rem;
+    padding-bottom: 1.8rem;
+}
+
+button {
+    height: 2.5rem;
+    width: 70%;
+    color: var(--violet);
+    font-size: 0.8rem;
+    border-radius: 1.4rem;
+    border: none;
+    margin-bottom: 5rem;
+    -webkit-box-shadow: 0px 2px 17px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 17px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 17px 0px rgba(0,0,0,0.75);
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: var(--magenta);
+    color: white;
+}
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social i {
+    border: 1px solid white;
+    font-size: 0.9rem;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    line-height: 1.7rem;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.social i:hover {
+    color: var(--magenta);
+    border: 1px solid var(--magenta);
+}
+
+.social i:nth-child(1), 
+.social i:nth-child(2) {
+    margin-right: 0.7rem;
+}
+
+.attribution { 
+    font-size: 0.5rem; 
+    text-align: center; 
+    color: white;
+    font-size: .8rem;
+    padding-bottom: 1rem;
+}
+
+.attribution a {
+    color: hsl(64, 90%, 49%); 
+}
+
+@media (min-width:800px) {
+
+    body {
+        background-image: url(images/bg-desktop.svg);
+    }
+
+    main{
+        flex-direction: row;
+        margin: 50px auto;
+    }
+
+    .top-left {
+        width: 55%;
+    }
+
+    .logo {
+        height: 50px;
+    }
+
+    .bottom-right {
+        width: 600px;
+        padding-left: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .bottom-right h2, 
+    .bottom-right p
+     {
+        text-align: left;
+    }
+    .bottom-right h2 {
+        font-size: 2.5rem;
+    }
+
+    .bottom-right p {
+        font-size: 1.1rem;
+        padding-bottom: 1.6rem;
+        max-width: 520px;
+        line-height: 2rem;
+    }
+
+    button {
+        height: 3.4rem;
+        width: 200px;
+        font-size: 1.2rem;
+        border-radius: 1.6rem;
+    }
+
+    .social {
+        position: absolute;
+        right: 160px;  
+        bottom: 40px;
+    }
+
+    .social i {
+        align-items: center;
+        height: 40px;
+        width: 40px;
+        font-size: 1.5rem;
+        line-height: 2.3rem;
+    }
+}
+
